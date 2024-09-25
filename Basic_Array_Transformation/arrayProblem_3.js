@@ -15,9 +15,9 @@ function sum(curr, accum) {
   // console.log(curr,  accum)
   return accum + curr * curr;
 }
-function sum(curr, accum) { 
+function sum(curr, accum) {
   // console.log(curr,  accum)
   return 0;
 }
 
-console.log(reduce([1, 2, 3, 4], sum, 25));
+console.log(reduce([1, 2, 3], sum, 25));
