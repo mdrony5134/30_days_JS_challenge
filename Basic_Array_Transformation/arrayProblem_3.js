@@ -2,14 +2,14 @@ var reduce = function (nums, fn, init) {
   let accum = init;
   for (let i = 0; i < nums.length; i++) {
     // console.log(nums[i], init)
-    accum = fn(nums[i], accum);
+    accum = fn(accum, nums[i]);
   }
   //   console.log(accum);
   return accum;
 };
 function sum(curr, accum) {
   // console.log(curr,  accum)
-  return curr + accum;
+  return accum + curr;
 }
 function sum(curr, accum) {
   // console.log(curr,  accum)
