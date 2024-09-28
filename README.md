@@ -187,7 +187,7 @@ The function returned by `createHelloWorld` should:
 - Always return the string "Hello World".
 - Ignore any arguments passed when invoking the returned function.
 
-# Counter Function
+## Counter Function
 
 ## Problem Description
 
@@ -228,3 +228,106 @@ n = -2
 
 - The counter function must return `n` initially.
 - With each subsequent call, it should return the previous value incremented by 1.
+
+## To Be Or Not To Be
+
+## Problem Description
+
+Write a function `expect` that helps developers test their code. This function should take in any value `val` and return an object containing two functions:
+
+1. **toBe(val)**: 
+   - Accepts another value.
+   - Returns `true` if the two values are strictly equal (`===`).
+   - If the values are not equal, it should throw an error with the message "Not Equal".
+
+2. **notToBe(val)**: 
+   - Accepts another value.
+   - Returns `true` if the two values are not strictly equal (`!==`).
+   - If the values are equal, it should throw an error with the message "Equal".
+
+### Example 1:
+
+**Input:**  
+func = () => expect(5).toBe(5)
+
+**Output:**  
+{"value": true}
+
+**Explanation:**  
+Since 5 is equal to 5, this expression returns true.
+
+### Example 2:
+
+**Input:**  
+func = () => expect(5).toBe(null)
+
+**Output:**  
+{"error": "Not Equal"}
+
+**Explanation:**  
+Since 5 is not equal to null, this expression throws the error "Not Equal".
+
+### Example 3:
+
+**Input:**  
+func = () => expect(5).notToBe(null)
+
+**Output:**  
+{"value": true}
+
+**Explanation:**  
+Since 5 is not equal to null, this expression returns true.
+
+## Requirements
+
+- Implement the `expect` function that allows testing values for equality and inequality.
+- Ensure appropriate error messages are thrown when the conditions are not met.
+
+# Create Counter
+
+## Problem Description
+
+Write a function `createCounter` that accepts an initial integer `init`. This function should return an object containing three functions:
+
+1. **increment()**: 
+   - Increases the current value by 1 and then returns the new value.
+
+2. **decrement()**: 
+   - Reduces the current value by 1 and then returns the new value.
+
+3. **reset()**: 
+   - Sets the current value back to `init` and then returns the value.
+
+### Example 1:
+
+**Input:**  
+init = 5, calls = ["increment", "reset", "decrement"]
+
+**Output:**  
+[6, 5, 4]
+
+**Explanation:**  
+- When `createCounter(5)` is called, the initial value is set to 5.
+- `counter.increment()` returns 6.
+- `counter.reset()` returns 5.
+- `counter.decrement()` returns 4.
+
+### Example 2:
+
+**Input:**  
+init = 0, calls = ["increment", "increment", "decrement", "reset", "reset"]
+
+**Output:**  
+[1, 2, 1, 0, 0]
+
+**Explanation:**  
+- When `createCounter(0)` is called, the initial value is set to 0.
+- `counter.increment()` returns 1.
+- `counter.increment()` returns 2.
+- `counter.decrement()` returns 1.
+- `counter.reset()` returns 0.
+- `counter.reset()` returns 0 again.
+
+## Requirements
+
+- Implement the `createCounter` function that allows incrementing, decrementing, and resetting the counter to its initial value.
