@@ -187,3 +187,44 @@ The function returned by `createHelloWorld` should:
 - Always return the string "Hello World".
 - Ignore any arguments passed when invoking the returned function.
 
+# Counter Function
+
+## Problem Description
+
+Given an integer `n`, return a counter function. The counter function should return the initial value of `n` when first called, and then increase by 1 with every subsequent call (e.g., n, n + 1, n + 2, etc.).
+
+### Example 1:
+
+**Input:**  
+n = 10  
+["call", "call", "call"]
+
+**Output:**  
+[10, 11, 12]
+
+**Explanation:**  
+- The first time the `counter()` function is called, it returns `n` (which is 10 in this case).
+- The next time `counter()` is called, it returns `n + 1` (which is 11).
+- The third time `counter()` is called, it returns `n + 2` (which is 12).
+
+### Example 2:
+
+**Input:**  
+n = -2  
+["call", "call", "call", "call", "call"]
+
+**Output:**  
+[-2, -1, 0, 1, 2]
+
+**Explanation:**  
+- Initially, the `counter()` function returns `n` (which is -2).
+- Each subsequent call increases the returned value by 1:  
+  - Second call returns `-1`.  
+  - Third call returns `0`.  
+  - Fourth call returns `1`.  
+  - Fifth call returns `2`.
+
+## Requirements
+
+- The counter function must return `n` initially.
+- With each subsequent call, it should return the previous value incremented by 1.
