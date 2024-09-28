@@ -152,3 +152,38 @@ If the length of the array is 0, the function should return `init`.
 
 - The function `fn` should be executed sequentially on each element of the array.
 - The solution should not use the built-in `Array.reduce` method.
+
+## Create Hello World Function
+
+## Problem Description
+
+Write a function `createHelloWorld`. It should return a new function that always returns the string "Hello World" regardless of any arguments passed.
+
+### Example 1:
+
+**Input:**  
+args = []
+
+**Output:**  
+"Hello World"
+
+**Explanation:**  
+The function `createHelloWorld` returns another function. When this returned function is invoked, it will always return the string "Hello World".
+
+### Example 2:
+
+**Input:**  
+args = [{}, null, 42]
+
+**Output:**  
+"Hello World"
+
+**Explanation:**  
+Even if arguments are passed to the returned function, it still returns the string "Hello World".
+
+## Requirements
+
+The function returned by `createHelloWorld` should:
+- Always return the string "Hello World".
+- Ignore any arguments passed when invoking the returned function.
+
